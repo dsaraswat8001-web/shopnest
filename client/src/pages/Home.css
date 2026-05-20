@@ -1,0 +1,104 @@
+.hero {
+  text-align: center;
+  padding: 3rem 0 2rem;
+}
+.hero-title {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  margin-bottom: 0.5rem;
+}
+.hero-accent { color: var(--accent); }
+.hero-sub { color: var(--text2); font-size: 1.05rem; margin-bottom: 1.5rem; }
+
+.search-bar {
+  position: relative;
+  max-width: 520px;
+  margin: 0 auto;
+}
+.search-icon {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1rem;
+  pointer-events: none;
+}
+.search-input { padding-left: 2.8rem !important; padding-right: 2.5rem !important; }
+.search-clear {
+  position: absolute;
+  right: 0.8rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: var(--text2);
+  font-size: 0.85rem;
+  cursor: pointer;
+  padding: 0.2rem;
+}
+
+.filters-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin: 1.5rem 0 1rem;
+  flex-wrap: wrap;
+}
+.cat-chips { display: flex; gap: 0.5rem; flex-wrap: wrap; flex: 1; }
+.cat-chip {
+  padding: 0.4rem 0.9rem;
+  border-radius: 20px;
+  border: 1.5px solid var(--border);
+  background: transparent;
+  color: var(--text2);
+  font-size: 0.82rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all var(--transition);
+}
+.cat-chip:hover { border-color: var(--accent); color: var(--accent); }
+.cat-chip-active { background: var(--accent-light); border-color: var(--accent); color: var(--accent); }
+.sort-select { max-width: 180px; }
+
+.results-count { color: var(--text2); font-size: 0.85rem; margin-bottom: 1rem; }
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+/* Skeleton */
+.skeleton-card {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+.skeleton-img {
+  height: 180px;
+  background: linear-gradient(90deg, var(--bg3) 25%, var(--bg4) 50%, var(--bg3) 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+.skeleton-body { padding: 1rem; display: flex; flex-direction: column; gap: 0.6rem; }
+.skeleton-line {
+  height: 12px;
+  border-radius: 6px;
+  width: 100%;
+  background: linear-gradient(90deg, var(--bg3) 25%, var(--bg4) 50%, var(--bg3) 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+@keyframes shimmer { to { background-position: -200% 0; } }
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem 0 2rem;
+}
+.page-info { color: var(--text2); font-size: 0.88rem; }
